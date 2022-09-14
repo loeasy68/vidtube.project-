@@ -33,9 +33,11 @@
     <div class="container play-container">
         <div class="row">
             <div class="play-video">
-                <video controls autoplay>
-                    <source src="video1.mp4" type="video/mp4">
-                </video>
+                <div id="videoDiv">
+                     
+                </div>
+                <input id="video" placeholder="Video number"> 
+                <button onclick="done"></button>
             
 <div class="tags">
     <a href="">#coding</a> <a href="">#Html</a> <a href="">#Css</a><a href="">#JavaScript</a>
@@ -189,10 +191,16 @@
                                                 <p>15k Views</p>
                                             </div>
                                         </div>
+
                                         
             </div>
 
         </div>
+        <script>
+            function done() {
+                videoDiv.innerHTML = `<video controls autoplay> <source src="Videos/${video.value}.mp4" type="video/mp4"> </video>`;
+            }
+        </script>
 
     </div>
 
